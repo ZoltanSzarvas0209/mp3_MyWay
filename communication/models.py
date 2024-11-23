@@ -10,7 +10,7 @@ class Image(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    image_url = CloudinaryField('image', default='placeholder')
+    image_url = CloudinaryField('image', default='https://res.cloudinary.com/your_cloud_name/image/upload/vdefault_placeholder.jpg')
 
     def __str__(self):
         return self.title

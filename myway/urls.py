@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from communication.views import communication
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('communication/', communication, name='communicationapp'),
+    path("", include("communication.urls"), name="communication-urls"),
 ]

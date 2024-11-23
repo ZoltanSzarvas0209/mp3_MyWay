@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <!-- Introduction Section -->
+    <section>
+        <h1>Introduction</h1>
+        <article>
+            <p>Welcome to our Communication Application.</p>
+        </article>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section>
+        <h2>Image Gallery</h2>
+        <p>This is the image gallery section</p>
+
+        {% for image in images %}
+            <div class="image-item">
+                <h3>{{ image.title }}</h3>
+                <img src="{{ image.image_url }}" alt="{{ image.title }}" />
+            </div>
+        {% endfor %}
+    </section>
+
+    <section>
+        <p>This is the display Images section. User picked images will be displayed here.</p>
+    </section>
+
+{% endblock %}
