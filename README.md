@@ -61,6 +61,10 @@
     * Django
     * Bootstrap
 
+* Database
+
+    * PostgreSQL
+
 
 * Additional resources
 
