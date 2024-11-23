@@ -15,7 +15,7 @@
  4. [ Research ](#research) 
  5. [ Target Audience ](#audience)  
  6. [ User Stories ](#user)
- 7. [ Planning,Structure and Design ](#design)
+ 7. [ Planning, Structure and Design ](#design)
      - [ Iterations ](#iterations)
      - [ Layout ](#layout)
      - [ Features ](#features)
@@ -153,10 +153,10 @@
 
 </details>
 
-## Structure and Design <a name="design"></a>
+## Planning, Structure and Design <a name="design"></a>
 
 
-### Iterations and Storie points <a name="iterations"></a>
+### Iterations <a name="iterations"></a>
 
 #### MoSCoW Prioritization
 
@@ -177,7 +177,7 @@
 
 </details>
 
-#### Iterations
+#### Iterations Summary
 
 <details>
 
@@ -207,31 +207,26 @@
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
 
-## HTML,CSS and JS validation: <a name="htmlandcss"></a>
 
-## Manual Testing <a name="alltesting"></a>
+### HTML,CSS and JS validation: <a name="htmlandcss"></a>
+
+### Manual Testing <a name="alltesting"></a>
 
 ### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
 
-<details>
-
-| **Feature** | **Test Method** | **Expectation** | **Outcome** |
-|-------------|-----------------|-----------------|-------------|
-| Navigation-Start Quiz | Click button | No unexpected console message/error | PASS |
-| Navigation-Quiz page1 next | Click button | No unexpected console message/error | PASS |
-
-
-</details>
-
 ### Form Validation testing
 
-## User Testing <a name="usertest"></a>
+### User Testing <a name="usertest"></a>
+
 
 ## Accesibility <a name="access"></a>
 
+
 ## Media <a name="media"></a>
 
+
 ## Credits <a name="credit"></a>
+
 
 ## Acknowledgement
             
