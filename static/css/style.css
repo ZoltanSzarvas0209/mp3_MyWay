@@ -1,0 +1,66 @@
+/*------------------------------Sections styling----------------------------*/
+
+/* Section styling */
+section {
+    text-align: center;
+    width: 100%;
+}
+
+/* Center-align the gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows wrapping to the next line if there are too many images */
+    gap: 16px; /* Adds space between images */
+}
+
+/* Styling for each image item */
+.image-item {
+    text-align: center;
+    width: 150px; /* Set a fixed width for uniformity */
+}
+
+.image-item img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+}
+
+/* Ensure headings are centered */
+h1, h2, h3, p {
+    margin: 8px 0;
+}
+
+/*-------------------------------------Header------------------------------*/
+
+/* Make the logo responsive */
+.navbar-brand img {
+    width: auto;
+    height: 120px;
+}
+
+
+/* Media queries to ensure responsive design */
+/* Make logo full-width on smaller screens when navbar is collapsed */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 100%;
+        height: auto; 
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        text-align: center;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navbar-collapse {
+        text-align: center;
+    }
+}

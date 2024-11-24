@@ -197,6 +197,14 @@
 
 ### Design Chices: <a name="designchoice"></a>
 
+* Colors: Coolors (https://coolors.co/) palette generator was used on the logo designed to pick the below colors for the project. 
+
+-  #C7DA31  - PEAR
+-  #B1C2C3  - ASH GREY
+-  #689CA0  - MOONSTONE
+-  #FFFFFF  - WHITE
+
+
 ### Features: <a name="features"></a>
 
 ### Wireframes: <a name="wireframes"></a>

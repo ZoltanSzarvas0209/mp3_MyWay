@@ -1,31 +1,65 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
+<div class="container mt-4">
 
     <!-- Introduction Section -->
-    <section>
-        <h1>Introduction</h1>
-        <article>
-            <p>Welcome to our Communication Application.</p>
-        </article>
+    <section class="row mt-4">
+        <div class="col-12 text-center">
+            <h1>Welcome to MyWay</h1>
+            <article>
+                At MyWay, we believe every child deserves a voice. Our web app is designed to help non-verbal children, including those with autism, communicate and express themselves.
+
+                Using easy-to-understand communication cards, MyWay empowers children to share their needs, feelings, and thoughts—making everyday interactions smoother and more meaningful for them and their loved ones.
+
+                Let’s create a world where every child’s voice is heard, their way!
+            </article>
+        </div>
     </section>
 
     <!-- Image Gallery Section -->
-    <section>
-        <h2>Image Gallery</h2>
-        <p>This is the image gallery section</p>
-
-        {% for image in images %}
-            <div class="image-item">
-                <h3>{{ image.title }}</h3>
-                <img src="{{ image.image_url }}" alt="{{ image.title }}" />
+    <section class="row mt-4">
+        <div class="col-9">
+            <h2 class="text-center">Image Gallery</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+                {% for image in images %}
+                    <div class="image-item text-center">
+                        <h3>{{ image.title }}</h3>
+                        {% if "placeholder" in image.image_url %}
+                            <img src="{% static 'images/default.jpg' %}" alt="placeholder image" class="img-thumbnail">
+                        {% else %}
+                            <img src="{{ image.image_url }}" alt="{{ image.title }}" class="img-thumbnail">
+                        {% endif %}
+                        <form action="{% url 'delete_image' image.id %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+        </div>
+        <div class="col-3">
+            <h2 class="text-center">Add Image</h2>
+            <!--ChatGPT used to find enctype to handle image uploads correctly-->
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }} <!-- Render form fields -->
+                <button type="submit">Add Image</button>
+            </form>
+
+        </div>
     </section>
 
-    <section>
-        <p>This is the display Images section. User picked images will be displayed here.</p>
+    <!-- Display Images Section -->
+    <section class="row mt-4">
+        <div class="col-12 text-center">
+            <h2>Communication Board</h2>
+            <p>This is the display Images section. User picked images will be displayed here.</p>
+        </div>
     </section>
+
+</div>
 
 {% endblock %}
