@@ -4,6 +4,15 @@
 section {
     text-align: center;
     width: 100%;
+    background-color: #689CA0;
+    border-radius: 16px;
+    margin: 20px;
+    padding: 16px;
+    overflow: hidden;
+}
+
+h2 {
+    padding: 20px;
 }
 
 /* Center-align the gallery */
@@ -27,6 +36,10 @@ section {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
 }
 
+#addimage {
+    overflow:hidden;
+}
+
 /* Ensure headings are centered */
 h1, h2, h3, p {
     margin: 8px 0;
@@ -34,12 +47,18 @@ h1, h2, h3, p {
 
 /*-------------------------------------Header------------------------------*/
 
-/* Make the logo responsive */
-.navbar-brand img {
-    width: auto;
-    height: 120px;
+/* used ChatGPT to workout how to bring the color back */
+.navbar-toggler-icon {
+    background-image: 
+        linear-gradient(to top, transparent 33%, #a7bcbd 33%, #a7bcbd 66%, transparent 66%),  /* top bar */
+        linear-gradient(to top, transparent 33%, #a7bcbd 33%, #a7bcbd 66%, transparent 66%),  /* middle bar */
+        linear-gradient(to top, transparent 33%, #a7bcbd 33%, #a7bcbd 66%, transparent 66%);  /* bottom bar */
+    background-size: 30px 4px; /* Adjust the size of the bars */
+    background-repeat: no-repeat;
+    background-position: 0 5px, 0 10px, 0 15px; /* Adjust the position of each bar */
+    width: 40px;
+    height: 26px;
 }
-
 
 /* Media queries to ensure responsive design */
 /* Make logo full-width on smaller screens when navbar is collapsed */

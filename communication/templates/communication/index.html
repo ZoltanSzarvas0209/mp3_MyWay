@@ -21,12 +21,13 @@
 
     <!-- Image Gallery Section -->
     <section class="row mt-4">
-        <div class="col-9">
+        <div class="col-md-9">
             <h2 class="text-center">Image Gallery</h2>
             <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
                 {% for image in images %}
                     <div class="image-item text-center">
                         <h3>{{ image.title }}</h3>
+                        <p>{{ image.image_url }}</p> <!-- Add this to inspect the URL -->
                         {% if "placeholder" in image.image_url %}
                             <img src="{% static 'images/default.jpg' %}" alt="placeholder image" class="img-thumbnail">
                         {% else %}
@@ -40,10 +41,11 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-3">
+
+        <div class="col-md-3">
             <h2 class="text-center">Add Image</h2>
             <!--ChatGPT used to find enctype to handle image uploads correctly-->
-            <form method="post" enctype="multipart/form-data">
+            <form id="addimage" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }} <!-- Render form fields -->
                 <button type="submit">Add Image</button>
