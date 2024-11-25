@@ -25,7 +25,6 @@
 
 /*------------------------------Sections styling----------------------------*/
 
-/* Section styling */
 section {
     text-align: center;
     width: 100%;
@@ -45,25 +44,24 @@ h2 {
     font-weight: bold;
 }
 
-/* Center-align the gallery */
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows wrapping to the next line if there are too many images */
-    gap: 16px;
+.slot-image {
+    width: 250px;
+    height: auto;
+    border-radius: 10%;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Styling for each image item */
 .image-item {
     text-align: center;
-    width: 150px; /* Set a fixed width for uniformity */
+    width: 160px;
 }
 
 .image-item img {
-    max-width: 100%; /* Makes the image responsive */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #addimage {
@@ -104,6 +102,10 @@ i {
     .navbar-brand img {
         width: 100%;
         height: auto; 
+    }
+
+    .slot-image {
+        width: 160px;
     }
 }
 

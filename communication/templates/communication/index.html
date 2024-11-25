@@ -76,13 +76,32 @@
     </section>
 
 
-    <!-- Display Images Section -->
-    <section class="row mt-4">
+    <!-- Communication Board section -->
+    <section class="row">
         <div class="col-12 text-center">
             <h2>Communication Board</h2>
             <p>This is the display Images section. User picked images will be displayed here.</p>
+    
+            <div id="communication-board" class="d-flex flex-wrap justify-content-center">
+                <!-- Empty slots for images -->
+                <div class="slot" id="slot1">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="Slot 1" class="slot-image">
+                </div>
+                <div class="slot" id="slot2">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="Slot 2" class="slot-image">
+                </div>
+                <div class="slot" id="slot3">
+                    <img src="{% static 'images/placeholder.jpg' %}" alt="Slot 3" class="slot-image">
+                </div>
+            </div>
+    
+            <!-- Reset button to clear all slots -->
+            <div class="mt-3">
+                <button class="crudbtn" id="reset-button">Reset</button>
+            </div>
         </div>
     </section>
+
 
 </div>
 
