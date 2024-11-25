@@ -195,7 +195,7 @@
 
 ### Layout: <a name="layout"></a>
 
-### Design Chices: <a name="designchoice"></a>
+### Design Choices: <a name="designchoice"></a>
 
 * Colors: Coolors (https://coolors.co/) palette generator was used on the logo designed to pick the below colors for the project. 
 
@@ -203,6 +203,11 @@
 -  #B1C2C3  - ASH GREY
 -  #689CA0  - MOONSTONE
 -  #FFFFFF  - WHITE
+-  #D7E46D  - MINDARO
+
+* Font family: 
+
+- I picked the "Parkinsans" font family with san-serif as a fall back.
 
 
 ### Features: <a name="features"></a>

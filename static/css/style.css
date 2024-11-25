@@ -1,5 +1,11 @@
 /*-----------------------------General styles----------------------------*/
 
+body {
+    font-family: "Parkinsans", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
 .crudbtn {
     width: 140px;
     padding: 10px 20px; 
@@ -35,7 +41,19 @@ section {
     overflow: hidden;
 }
 
-h2 {
+h1,h2 {
+    margin: 10px;
+    padding: 30px;
+    font-weight: bold;
+}
+
+h1 i,h2 i {
+    color: #D7E46D;
+    font-size: 50px;
+}
+
+
+h3 {
     padding: 20px;
 }
 
@@ -66,11 +84,6 @@ h2 {
 
 #addimage {
     overflow:hidden;
-}
-
-/* Ensure headings are centered */
-h1, h2, h3, p {
-    margin: 8px 0;
 }
 
 /*-------------------------------------Header------------------------------*/
