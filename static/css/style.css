@@ -25,7 +25,7 @@ h2 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Allows wrapping to the next line if there are too many images */
-    gap: 16px; /* Adds space between images */
+    gap: 16px;
 }
 
 /* Styling for each image item */

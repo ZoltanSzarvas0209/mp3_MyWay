@@ -36,6 +36,9 @@
                             {% csrf_token %}
                             <button type="submit">Delete</button>
                         </form>
+
+                        <!--edit button-->
+                        <a href="{% url 'edit_image' image.id %}" class="btn btn-primary">Edit</a>
                     </div>
                 {% endfor %}
             </div>
@@ -51,6 +54,7 @@
             </form>
 
         </div>
+
     </section>
 
     <!-- Display Images Section -->
