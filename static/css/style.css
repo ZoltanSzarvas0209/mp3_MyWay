@@ -1,5 +1,14 @@
 /*-----------------------------General styles----------------------------*/
 
+.link {
+    color: #689CA0 ;
+    text-decoration: none;
+}
+
+.link:hover {
+    color: #D7E46D;
+}
+
 body {
     font-family: "Parkinsans", sans-serif;
     font-weight: 600;
@@ -86,6 +95,27 @@ h3 {
     overflow:hidden;
 }
 
+/*------------------------------------Login------------------------*/
+
+.login-page {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*------------------------------------Logout------------------------*/
+
+.logout {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*------------------------------------SignUp------------------------*/
+
+.signup {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
 /*-------------------------------------Header------------------------------*/
 
 /* used ChatGPT to workout how to bring the color back */
@@ -101,7 +131,15 @@ h3 {
     height: 26px;
 }
 
-/*-------------Footer------------*/
+.nav-link {
+    color: #689CA0 ;
+}
+
+.nav-link:hover {
+    color: #D7E46D;
+}
+
+/*----------------------------------------Footer-------------------------------------*/
 
 i {
     font-size: 30px;
