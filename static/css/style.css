@@ -1,7 +1,7 @@
 /*-----------------------------General styles----------------------------*/
 
 .crudbtn {
-    width: 80px;
+    width: 140px;
     padding: 10px 20px; 
     margin: 3px;
     background-color: #B1C2C3;
@@ -17,6 +17,10 @@
 .crudbtn:hover {
     background-color:#C7DA31; /* Slightly darker background on hover */
     cursor: pointer;           /* Change the cursor to indicate clickability */
+}
+
+.pagination-controls {
+    margin: 12px;
 }
 
 /*------------------------------Sections styling----------------------------*/

@@ -42,20 +42,39 @@
                     </div>
                 {% endfor %}
             </div>
+
+            <!-- Pagination controls -->
+            <div class="pagination-controls">
+                <span>
+                    {% if images.has_previous %}
+                        <a class="crudbtn" href="?page=1">&laquo; first</a>
+                        <a class="crudbtn" href="?page={{ images.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current-page crudbtn">
+                        Page {{ images.number }} of {{ images.paginator.num_pages }}.
+                    </span>
+
+                    {% if images.has_next %}
+                        <a class="crudbtn" href="?page={{ images.next_page_number }}">next</a>
+                        <a class="crudbtn" href="?page={{ images.paginator.num_pages }}">last &raquo;</a>
+                    {% endif %}
+                </span>
+            </div>
         </div>
 
         <div class="col-md-2">
             <h2 class="text-center" id="addimageheader">Add Image</h2>
-            <!--ChatGPT used to find enctype to handle image uploads correctly-->
+            <!-- ChatGPT used to find enctype to handle image uploads correctly -->
             <form id="addimage" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }} <!-- Render form fields -->
                 <button class="crudbtn" type="submit">Add Image</button>
             </form>
-
         </div>
 
     </section>
+
 
     <!-- Display Images Section -->
     <section class="row mt-4">

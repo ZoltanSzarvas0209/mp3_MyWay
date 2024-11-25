@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from .models import Image
 from .forms import ImageForm
 from django.contrib import messages
+from django.core.paginator import Paginator, Page
 
 
 # Get all images and template with introduction
@@ -20,6 +21,10 @@ def communication_view(request):
     """
     
     queryset = Image.objects.all()  # Fetch all Image objects
+    paginator = Paginator(queryset, 4)  # Paginate the queryset with 4 images per page
+    page_number = request.GET.get('page')  # Get the current page number from the request
+    page_obj = paginator.get_page(page_number)  # Get the page object
+
     form = ImageForm()
 
     if request.method == 'POST':
@@ -32,12 +37,11 @@ def communication_view(request):
         else:
             messages.error(request, "Failed to upload image. Please try again.")
 
-
     return render(
         request,
         "communication/index.html", 
-        {"images": queryset,
-        "form": form},  # Pass the queryset and the form to the template
+        {"images": page_obj,  # Pass the paginated images instead of the full queryset
+         "form": form,}  # Pass the form to the template
     )
 
 
