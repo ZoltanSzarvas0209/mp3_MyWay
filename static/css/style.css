@@ -1,3 +1,24 @@
+/*-----------------------------General styles----------------------------*/
+
+.crudbtn {
+    width: 80px;
+    padding: 10px 20px; 
+    margin: 3px;
+    background-color: #B1C2C3;
+    color: black;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    border: solid 1px #B1C2C3;
+    border-radius: 25%;
+    display: inline-block;
+}
+
+.crudbtn:hover {
+    background-color:#C7DA31; /* Slightly darker background on hover */
+    cursor: pointer;           /* Change the cursor to indicate clickability */
+}
+
 /*------------------------------Sections styling----------------------------*/
 
 /* Section styling */

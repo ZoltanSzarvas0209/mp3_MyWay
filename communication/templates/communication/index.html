@@ -34,11 +34,11 @@
                         {% endif %}
                         <form action="{% url 'delete_image' image.id %}" method="post" style="display:inline;">
                             {% csrf_token %}
-                            <button type="submit">Delete</button>
+                            <button class="crudbtn" type="submit">Delete</button>
                         </form>
 
                         <!--edit button-->
-                        <a href="{% url 'edit_image' image.id %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'edit_image' image.id %}" class="crudbtn">Edit</a>
                     </div>
                 {% endfor %}
             </div>
@@ -50,7 +50,7 @@
             <form id="addimage" method="post" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form.as_p }} <!-- Render form fields -->
-                <button type="submit">Add Image</button>
+                <button class="crudbtn" type="submit">Add Image</button>
             </form>
 
         </div>
