@@ -15,6 +15,11 @@ h2 {
     padding: 20px;
 }
 
+#addimageheader {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 /* Center-align the gallery */
 .image-gallery {
     display: flex;
@@ -58,6 +63,14 @@ h1, h2, h3, p {
     background-position: 0 5px, 0 10px, 0 15px; /* Adjust the position of each bar */
     width: 40px;
     height: 26px;
+}
+
+/*-------------Footer------------*/
+
+i {
+    font-size: 30px;
+    color: #A7BCBD;
+    margin: 20px;
 }
 
 /* Media queries to ensure responsive design */
