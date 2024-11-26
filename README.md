@@ -10,12 +10,11 @@
 ## Table of contents
 
  1. [ UX ](#ux)
- 2. [ Technologies and Tools ](#technologies)  
- 3. [ Objective ](#objective)  
- 4. [ Research ](#research) 
- 5. [ Target Audience ](#audience)  
- 6. [ User Stories ](#user)
- 7. [ Planning, Structure and Design ](#design)
+ 2. [ Technologies and Tools ](#technologies)    
+ 3. [ Research ](#research) 
+ 4. [ Target Audience ](#audience)  
+ 5. [ User Stories ](#user)
+ 6. [ Planning, Structure and Design ](#design)
      - [ Iterations ](#iterations)
      - [ Layout ](#layout)
      - [ Features ](#features)
@@ -23,16 +22,16 @@
      - [ Wireframes ](#wireframes)
      - [ Database ](#database)
         - [ Entity Relationship Diagram ](#erd) 
- 9. [ Deployment ](#deployment)
- 10. [ Testing/Bugs/Fixes ](#testing)
+ 7. [ Deployment ](#deployment)
+ 8. [ Testing/Bugs/Fixes ](#testing)
      - [ HTML,CSS and JS Validation](#htmlandcss)
      - [ Manual Testing ](#alltesting)
           - [ Pre-deployment ](#predeployment)
           - [ post-deployment ](#postdeployment)
      - [ User Testing ](#usertest)
      - [ Accessibility ](#access)
- 11. [ Media ](#media)
- 12. [ Credits ](#credit)  
+ 9. [ Media ](#media)
+ 10. [ Credits ](#credit)  
 
 ## UX <a name="ux"></a>
 
@@ -85,11 +84,12 @@
 
 </details>
 
-### Objective <a name="objective"></a>
-
 ### Research <a name="research"></a>
 
 ### Target Audience <a name="audience"></a>
+
+* This app is made for children who cannot speak, including those with autism, speech delays, or other challenges. It helps them express their needs, feelings,
+ and thoughts using simple communication or picture cards. The app also supports parents, caregivers, and teachers by making it easier to communicate and connect with these children.
 
 ### User Stories <a name="user"></a>
 
@@ -205,6 +205,8 @@
 -  #FFFFFF  - WHITE
 -  #D7E46D  - MINDARO
 
+
+
 * Font family: 
 
 - I picked the "Parkinsans" font family with san-serif as a fall back.
@@ -223,6 +225,15 @@
 
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
+
+Notes for testing:
+
+Bugs found during development:
+1. delete and edit functions direct back to the top of the page:
+
+2. add image section is not fitting in well with the design.
+
+3. Main functionality is not reasonable/inconvinient to use --- will address this if times allow it ,however I think the app is not designed for mobile size
 
 
 ### HTML,CSS and JS validation: <a name="htmlandcss"></a>

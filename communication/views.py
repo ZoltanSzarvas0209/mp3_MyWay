@@ -3,6 +3,7 @@ from .models import Image
 from .forms import ImageForm
 from django.contrib import messages
 from django.core.paginator import Paginator, Page
+from django.urls import reverse
 
 
 # Get all images and template with introduction
@@ -62,7 +63,9 @@ def delete_image(request, image_id):
     image = get_object_or_404(Image, id=image_id)
     image.delete()
     messages.success(request, "Image deleted successfully!")
-    return redirect('communication_home')
+    
+    url = reverse('communication_home') + '#image-gallery'
+    return redirect(url)
 
 # view to edit an image
 def edit_view(request, image_id):
