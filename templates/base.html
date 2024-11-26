@@ -1,5 +1,6 @@
 {% load static %}
 
+{% url 'contact_view' as contact_url %}
 {% url 'communication_home' as home_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
@@ -43,6 +44,10 @@
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="{% url 'communication_home' %}">Home</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
+                            href="{% url 'contact_view' %}">Contact</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
