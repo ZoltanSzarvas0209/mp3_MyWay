@@ -68,6 +68,7 @@
 * Additional resources
 
     * Coolors: https://coolors.co/ 
+    * Canva: https://www.canva.com/
     * FontAwesome: https://fontawesome.com/search?o=r&m=free&s=solid
     * Perplexity: perplexity.ai
     * ChatGPT: https://chat.openai.com/
@@ -214,7 +215,54 @@
 
 ### Features: <a name="features"></a>
 
+1. <details><summary>Header</summary><img src="">
+
+- Logo : designed using Canva
+- Navigation/Burger Icon: navigation links to all pages in the app or toggle icon on smaller devices. 
+
+</details>
+
+2. <details><summary>Introduction</summary><img src="">
+
+- Text-based section with an Introduction written about the application.
+
+</details>
+
+3. <details><summary>Communication board</summary><img src="">
+
+- Written in HTML to include 3 empty image slots. 
+- Include a reset button designed to delete image selection and reset to the default 3 empty slots.
+- Functionality is implemented using JavaScript
+
+</details>
+
+4. <details><summary>Image Gallery</summary><img src="">
+
+- A collection of images displayed in a paginated format.
+- Pagination is implemented with Django's views using python. 
+
+</details>
+
+5. <details><summary>Add Image</summary><img src="">
+
+- Add image section is inbedded with the image gallery to create full CRUD functionality. IT is implemented using Django's forms written in python.
+
+</details>
+
+6. <details><summary>Pagination controls</summary><img src="">
+
+- Pagination is implemented through the Django's views written is python combined with html in django's templates and JavaScript for enhanced functionalities. 
+
+</details>
+
 ### Wireframes: <a name="wireframes"></a>
+
+-   <details><summary> Wireframes: Home </summary>
+    <img src="static/images/contact.png">
+    </details>
+-   <details><summary> Wireframes: Contact </summary>
+    <img src="static/images/contact.png">
+    </details>
 
 ### Database: <a name="database"></a>
 
@@ -231,7 +279,32 @@ Notes for testing:
 Bugs found during development:
 1. delete and edit functions direct back to the top of the page:
 
+- solution: JavaScript added to implement required functionality, issue partialysolved, could not get the edit buttons to work.
+
 2. edit function when triggered overwrites pagination and image gallery gets out of context.
+
+- solution: following code was addedmodified to rectify the issue.
+if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES, instance=image)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Image updated successfully!")
+
+            # Set session flag to scroll to image gallery
+            request.session['scrollToImageGallery'] = True
+
+            # Redirect to the gallery section with page number
+            url = reverse('communication_home') + f'?page={page_number}#image-gallery'
+            return redirect(url)
+        else:
+            messages.error(request, "Failed to update image. Please try again.")
+    else:
+        form = ImageForm(instance=image)
+
+    paginator = Paginator(queryset, 4)
+    page_obj = paginator.get_page(page_number)
+
 
 3. add image section is not fitting in well with the design and pushes other elements out of place.
 
