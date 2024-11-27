@@ -62,7 +62,7 @@
                         {% else %}
                             <img src="{{ image.image_url.url }}" alt="{{ image.title }}" class="img-thumbnail">
                         {% endif %}
-                        <form action="{% url 'delete_image' image.id %}" method="post" style="display:inline;">
+                        <form action="{% url 'delete_image' image.id %}" method="post">
                             {% csrf_token %}
                             <button class="crudbtn" type="submit">Delete</button>
                         </form>

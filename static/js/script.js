@@ -37,3 +37,43 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+// This section was added to resolve the issue of buttons making a jump to the top of the page. ChatGPT was used to create the below code.
+
+// event listener for form submission (image add form)
+document.addEventListener('DOMContentLoaded', function () {
+    const addImageForm = document.getElementById('addimage');
+    
+    // Check if the page is redirected after editing or adding an image and scroll back to the gallery
+    if (sessionStorage.getItem('scrollToImageGallery') === 'true') {
+        const gallerySection = document.getElementById('image-gallery');
+        if (gallerySection) {
+            gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        sessionStorage.removeItem('scrollToImageGallery'); // Clear the flag
+    }
+
+    // Handle pagination links
+    const paginationLinks = document.querySelectorAll('.pagination-controls a');
+    paginationLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            sessionStorage.setItem('scrollToImageGallery', 'true');
+        });
+    });
+
+    // Handle form submissions (e.g., delete image)
+    const deleteForms = document.querySelectorAll('form[action*="delete_image"]');
+    deleteForms.forEach(form => {
+        form.addEventListener('submit', function () {
+            sessionStorage.setItem('scrollToImageGallery', 'true');
+        });
+    });
+
+    // Handle the 'Add Image' form submission
+    if (addImageForm) {
+        addImageForm.addEventListener('submit', function () {
+            sessionStorage.setItem('scrollToImageGallery', 'true');
+        });
+    }
+});

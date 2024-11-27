@@ -231,9 +231,11 @@ Notes for testing:
 Bugs found during development:
 1. delete and edit functions direct back to the top of the page:
 
-2. add image section is not fitting in well with the design.
+2. edit function when triggered overwrites pagination and image gallery gets out of context.
 
-3. Main functionality is not reasonable/inconvinient to use --- will address this if times allow it ,however I think the app is not designed for mobile size
+3. add image section is not fitting in well with the design and pushes other elements out of place.
+
+4. Main functionality is not reasonable/inconvinient to use --- will address this if times allow it ,however I think the app is not designed for mobile size
 
 
 ### HTML,CSS and JS validation: <a name="htmlandcss"></a>

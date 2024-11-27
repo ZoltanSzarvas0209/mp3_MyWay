@@ -4,7 +4,7 @@ from .forms import ImageForm
 from django.contrib import messages
 from django.core.paginator import Paginator, Page
 from django.urls import reverse
-
+from django.http import QueryDict
 
 # Get all images and template with introduction
 def communication_view(request):
@@ -72,37 +72,48 @@ def edit_view(request, image_id):
     """
     Edit an image specified by its ID.
 
-    Parameter:
-    - `image_id`: The primary key of the `Image¬ instance to be edited.
+    Parameters:
+    - `image_id`: The primary key of the `Image` instance to be edited.
 
     Behavior:
-    Edits an existing Image from the database and then redirects to home page with success message.
+    Allows the user to update the details of an existing image, including its title and file.
+    If the form is valid, the changes are saved, a success message is displayed, 
+    and the user is redirected to the main/home page with the updated gallery section visible.
 
     Redirects To:
-    - `communication_home`: The main/home page.
+    - `communication_home`: The main/home page with a `#image-gallery` fragment and the correct page number.
     """
     image = get_object_or_404(Image, id=image_id)
-    queryset = Image.objects.all()  # Fetch all Image objects
+    queryset = Image.objects.all()
+    page_number = request.GET.get('page', 1)
 
     if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES, instance=image) # Bind form with POST data and the image instance
-        
+        form = ImageForm(request.POST, request.FILES, instance=image)
+
         if form.is_valid():
             form.save()
             messages.success(request, "Image updated successfully!")
-            return redirect('communication_home')
+
+            # Set session flag to scroll to image gallery
+            request.session['scrollToImageGallery'] = True
+
+            # Redirect to the gallery section with page number
+            url = reverse('communication_home') + f'?page={page_number}#image-gallery'
+            return redirect(url)
         else:
             messages.error(request, "Failed to update image. Please try again.")
     else:
-        # Pre-populate the form with the existing image data
         form = ImageForm(instance=image)
+
+    paginator = Paginator(queryset, 4)
+    page_obj = paginator.get_page(page_number)
 
     return render(
         request,
         "communication/index.html",
         {
-            "form": form, 
-            "image": image,  # Pass the specific image being edited
-            "images": queryset,  # Pass the full list of images for the gallery
+            "form": form,
+            "image": image,
+            "images": page_obj,
         },
     )
