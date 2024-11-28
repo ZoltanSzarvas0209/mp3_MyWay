@@ -39,20 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-// This section was added to resolve the issue of buttons making a jump to the top of the page. ChatGPT was used to create the below code.
+// This section was added to resolve the issue of buttons making a jump to the top of the page. ChatGPT was used to help create initial code 
+//and then reorganised and modified to suit project needs.
 
 // event listener for form submission (image add form)
 document.addEventListener('DOMContentLoaded', function () {
     const addImageForm = document.getElementById('addimage');
-    
-    // Check if the page is redirected after editing or adding an image and scroll back to the gallery
-    if (sessionStorage.getItem('scrollToImageGallery') === 'true') {
-        const gallerySection = document.getElementById('image-gallery');
-        if (gallerySection) {
-            gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        sessionStorage.removeItem('scrollToImageGallery'); // Clear the flag
-    }
+    const crudButtons = document.querySelectorAll('.image-item a.crudbtn'); // Select all crud buttons
 
     // Handle pagination links
     const paginationLinks = document.querySelectorAll('.pagination-controls a');
@@ -62,10 +55,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Handle form submissions (e.g., delete image)
-    const deleteForms = document.querySelectorAll('form[action*="delete_image"]');
-    deleteForms.forEach(form => {
-        form.addEventListener('submit', function () {
+     // Add click event listeners to all crud buttons
+    crudButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            // Save a session storage flag to scroll back to the image gallery
             sessionStorage.setItem('scrollToImageGallery', 'true');
         });
     });
@@ -76,4 +69,15 @@ document.addEventListener('DOMContentLoaded', function () {
             sessionStorage.setItem('scrollToImageGallery', 'true');
         });
     }
+
+    // Check if the page is redirected after an edit operation
+    if (sessionStorage.getItem('scrollToImageGallery') === 'true') {
+        const gallerySection = document.getElementById('image-gallery');
+        if (gallerySection) {
+        // Scroll back to the image gallery section smoothly
+            gallerySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+            sessionStorage.removeItem('scrollToImageGallery'); // Clear the flag
+    }
 });
+
