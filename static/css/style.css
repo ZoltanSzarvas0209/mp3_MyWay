@@ -126,6 +126,18 @@ h3 {
     margin: 20px;
 }
 
+/*-----------------------------Pop-up window----------------------------*/
+
+#pop-up {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 50%;
+}
+
 /*-------------------------------------Header------------------------------*/
 
 /* used ChatGPT to workout how to bring the color back */
