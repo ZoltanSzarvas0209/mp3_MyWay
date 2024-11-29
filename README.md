@@ -255,6 +255,26 @@
 
 </details>
 
+7. <details><summary>Pop-up Confirmation Window</summary><img src="">
+
+- The pop-up window is designed to enhance UX and its purpose is to make sure the user is aware and happy with their communication image selected.
+- The pop-up is written in html and is dynamically displayed using JavaScript.
+
+</details>
+
+8. <details><summary>Contact Page</summary><img src="">
+
+- The contact page is to allow users a way to submit enquiries/suggestions/feedback about the site.
+
+</details>
+
+9. <details><summary>Footer</summary><img src="">
+
+- Footer is designed in the base template to ensure consistency throughout the app.
+- It is consist of a selection of social links.
+
+</details>
+
 
 
 ### Wireframes: <a name="wireframes"></a>
