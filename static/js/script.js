@@ -81,39 +81,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Pop-up window section
-document.addEventListener('DOMContentLoaded', function () {
+
+
+// Pop-up window section - commented out and will come back to it later if there is sufficient time/otherwise will be listed as optional enhancement
+//document.addEventListener('DOMContentLoaded', function () {
     // Get references to the pop-up image and the confirm button
-    const popUpImage = document.getElementById('pop-up-image'); // Pop-up image placeholder
-    const confirmButton = document.getElementById('confirm-button'); // Confirm button
+    //const popUpImage = document.getElementById('pop-up-image'); // Pop-up image placeholder
+    //const confirmButton = document.getElementById('confirm-button'); // Confirm button
     // Select all gallery images
-    const galleryImages = document.querySelectorAll('.image-item img');
+    //const galleryImages = document.querySelectorAll('.image-item img');
 
     // Add click event listener to each gallery image
-    galleryImages.forEach((img) => {
-        img.addEventListener('click', function () {
-            const imageUrl = img.src; // Get the image URL
-            const imageTitle = img.alt; // Get the image title or alt text
-            const popUpWindow = document.getElementById('pop-up'); // get pop up window 
+    //galleryImages.forEach((img) => {
+        //img.addEventListener('click', function () {
+            //const imageUrl = img.src; // Get the image URL
+            //const imageTitle = img.alt; // Get the image title or alt text
+            //const popUpWindow = document.getElementById('pop-up'); // get pop up window 
 
-            popUpWindow.style.display = 'block'; // Make the pop-up window visible
+            //popUpWindow.style.display = 'block'; // Make the pop-up window visible
 
-            if (popUpImage) {
-                popUpImage.src = imageUrl; // Set the selected image in the pop-up
-                popUpImage.alt = imageTitle; // Update alt text for accessibility
-            } else {
-                alert("Pop-up image placeholder not found!");
-            }
-        });
-    });
+            //if (popUpImage) {
+                //popUpImage.src = imageUrl; // Set the selected image in the pop-up
+                //popUpImage.alt = imageTitle; // Update alt text for accessibility
+            //} else {
+                //alert("Pop-up image placeholder not found!");
+            //}
+        //});
+    //});
 
     // Add click event listener to the confirm button
-    confirmButton.addEventListener('click', function () {
-        const popUpWindow = document.getElementById('pop-up'); // get pop up window 
-        popUpWindow.style.display = 'none'; // Hide pop-up window
-        if (popUpImage) {
-            popUpImage.src = ""; // Clear the pop-up image
-            popUpImage.alt = ""; // Clear the alt text
-        }
-    });
-});
+    //confirmButton.addEventListener('click', function () {
+        //const popUpWindow = document.getElementById('pop-up'); // get pop up window 
+        //popUpWindow.style.display = 'none'; // Hide pop-up window
+        //if (popUpImage) {
+            //popUpImage.src = ""; // Clear the pop-up image
+            //popUpImage.alt = ""; // Clear the alt text
+        //}
+    //});
+//});
