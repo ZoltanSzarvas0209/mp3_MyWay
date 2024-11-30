@@ -301,11 +301,11 @@ Notes for testing:
 Bugs found during development:
 1. delete and edit functions direct back to the top of the page:
 
-- solution: JavaScript added to implement required functionality, issue partialysolved, could not get the edit buttons to work.
+- solution: JavaScript added to implement required functionality.
 
 2. edit function when triggered overwrites pagination and image gallery gets out of context.
 
-- solution: following code was addedmodified to rectify the issue.
+- solution: following code was addedmodified to rectify the issue. in communication/views.py 
 if request.method == 'POST':
         form = ImageForm(request.POST, request.FILES, instance=image)
 
@@ -330,7 +330,15 @@ if request.method == 'POST':
 
 3. add image section is not fitting in well with the design and pushes other elements out of place.
 
-4. Main functionality is not reasonable/inconvinient to use --- will address this if times allow it ,however I think the app is not designed for mobile size
+4. main section pushed out of alignment.
+
+issue found: bootstrap settings, navbar-toggler class psudo element (box-sixing)
+button.navbar-toggler *, button.navbar-toggler ::after, button.navbar-toggler ::before {
+    box-sizing: border-box;
+}
+
+5. Django messages out of alignment. : 
+Solution: text-center class added to div with id="msg"
 
 
 ### HTML,CSS and JS validation: <a name="htmlandcss"></a>
