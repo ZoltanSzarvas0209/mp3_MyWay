@@ -24,12 +24,6 @@
         - [ Entity Relationship Diagram ](#erd) 
  7. [ Deployment ](#deployment)
  8. [ Testing/Bugs/Fixes ](#testing)
-     - [ HTML,CSS and JS Validation](#htmlandcss)
-     - [ Manual Testing ](#alltesting)
-          - [ Pre-deployment ](#predeployment)
-          - [ post-deployment ](#postdeployment)
-     - [ User Testing ](#usertest)
-     - [ Accessibility ](#access)
  9. [ Media ](#media)
  10. [ Credits ](#credit)  
 
@@ -296,6 +290,8 @@
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
 
+- Please see [TESTING.md](TESTING.md) for full manual and automated testing.
+
 Notes for testing:
 
 Bugs found during development:
@@ -339,18 +335,6 @@ button.navbar-toggler *, button.navbar-toggler ::after, button.navbar-toggler ::
 
 5. Django messages out of alignment. : 
 Solution: text-center class added to div with id="msg"
-
-
-### HTML,CSS and JS validation: <a name="htmlandcss"></a>
-
-### Manual Testing <a name="alltesting"></a>
-
-### Initial testing items below arose during development and most were dealt with at the time.  <a name="predeployment"></a>
-
-### Form Validation testing
-
-### User Testing <a name="usertest"></a>
-
 
 ## Accesibility <a name="access"></a>
 

@@ -1,0 +1,16 @@
+
+
+# MANUAL TESTING
+
+## TESTING USER STORIES
+
+## FULL TESTING
+
+
+
+# AUTOMATED TESTING
+
+## HTML,CSS and JS validation
+
+## Lighthouse 
+
