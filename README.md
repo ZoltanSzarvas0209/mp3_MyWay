@@ -209,20 +209,20 @@
 
 ### Features: <a name="features"></a>
 
-1. <details><summary>Header</summary><img src="">
+1. <details><summary>Header</summary><img src="static/images/features/feature1_header.png">
 
 - Logo : designed using Canva
 - Navigation/Burger Icon: navigation links to all pages in the app or toggle icon on smaller devices. 
 
 </details>
 
-2. <details><summary>Introduction</summary><img src="">
+2. <details><summary>Introduction</summary><img src="static/images/features/feature2_introduction.png">
 
 - Text-based section with an Introduction written about the application.
 
 </details>
 
-3. <details><summary>Communication board</summary><img src="">
+3. <details><summary>Communication board</summary><img src="static/images/features/feature3_communicationboard.png">
 
 - Written in HTML to include 3 empty image slots. 
 - Include a reset button designed to delete image selection and reset to the default 3 empty slots.
@@ -230,42 +230,45 @@
 
 </details>
 
-4. <details><summary>Image Gallery</summary><img src="">
+4. <details><summary>Image Gallery</summary><img src="static/images/features/feature4_imagegallery.png">
 
 - A collection of images displayed in a paginated format.
 - Pagination is implemented with Django's views using python. 
 
 </details>
 
-5. <details><summary>Add Image</summary><img src="">
+5. <details><summary>Add Image</summary><img src="static/images/features/feature5_addimage.png">
 
 - Add image section is inbedded with the image gallery to create full CRUD functionality. IT is implemented using Django's forms written in python.
 
 </details>
 
-6. <details><summary>Pagination controls</summary><img src="">
+6. <details><summary>Pagination controls</summary><img src="static/images/features/feature6_paginationcontrols.png">
 
 - Pagination is implemented through the Django's views written is python combined with html in django's templates and JavaScript for enhanced functionalities. 
+- It provides simple next/previous as well as first/last buttons for larger image stores.
 
 </details>
 
-7. <details><summary>Pop-up Confirmation Window</summary><img src="">
+7. <details><summary>Contact Page</summary><img src="static/images/features/feature7_contact.png">
 
-- The pop-up window is designed to enhance UX and its purpose is to make sure the user is aware and happy with their communication image selected.
-- The pop-up is written in html and is dynamically displayed using JavaScript.
-
-</details>
-
-8. <details><summary>Contact Page</summary><img src="">
-
-- The contact page is to allow users a way to submit enquiries/suggestions/feedback about the site.
+- The contact page is to allow users a way to submit enquiries/suggestions/feedback about the site through a form that saves the details to the database and can be reviewed by
+superusers through Django's admin page.
 
 </details>
 
-9. <details><summary>Footer</summary><img src="">
+8. <details><summary>Footer</summary><img src="static/images/features/feature8_footer.png">
 
 - Footer is designed in the base template to ensure consistency throughout the app.
 - It is consist of a selection of social links.
+
+</details>
+
+9. <details><summary>Registration</summary><img src="static/images/features/feature9_login.png"><img src="static/images/features/feature9_logout.png"><img src="static/images/features/feature9_registration.png">
+
+- Django's built in AllAuth used to create the registration and corresponding login and logout features.
+- Login feature page also provides a link to "sing up", which will direct the user to the registration page.
+- Remember me option is provided on the login page.
 
 </details>
 
@@ -335,9 +338,6 @@ button.navbar-toggler *, button.navbar-toggler ::after, button.navbar-toggler ::
 
 5. Django messages out of alignment. : 
 Solution: text-center class added to div with id="msg"
-
-## Accesibility <a name="access"></a>
-
 
 ## Media <a name="media"></a>
 
