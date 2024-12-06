@@ -68,15 +68,8 @@
 
 * HTML VALIDATION: 
     
--   <details> <summary> Initial validation errors </summary>
-    <img src="">
-    </details>
--   <details> <summary> Initial validation warning </summary>
-    <img src="">
-    </details>
-
--   <details> <summary> PASSED VALIDATION </summary>
-    <img src="">
+-   <details> <summary> Initial validation </summary>
+    <img src="static/images/html_validation/html_validation_initial.png">
     </details>
 
 -   <details> <summary> PASSED VALIDATION </summary>
