@@ -11,7 +11,7 @@
 
 <head>
     <title>Communication Application</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -46,7 +46,7 @@
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
                             href="{% url 'communication_home' %}">Home</a>
                     </li>
-                    <li class="nav-item"></li>
+                    <li class="nav-item">
                         <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
                             href="{% url 'contact_view' %}">Contact</a>
                     </li>
@@ -97,12 +97,20 @@
         <p class="text-center">
         {% block copyright %}Made by Zoltan Szarvas{% endblock copyright %}
         </p>
-        <p class="text-center">
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-            <i class="fab fa-instagram-square"></i>
-            <i class="fab fa-youtube-square"></i>
-        </p>
+            <ul class="text-center social-links">
+                <li>
+                    <a href="https://en-gb.facebook.com/" aria-label="visit facebook"> <i class="fab fa-facebook-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://x.com/Log%20in/" aria-label="visit twitter"><i class="fab fa-twitter-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/accounts/login/" aria-label="visit instagram"><i class="fab fa-instagram-square"></i></a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/" aria-label="visit youtube"><i class="fab fa-youtube-square"></i></a>
+                </li>
+            </ul>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

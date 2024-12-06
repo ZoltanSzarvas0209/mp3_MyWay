@@ -185,6 +185,10 @@ i {
     margin: 20px;
 }
 
+.social-links li {
+    display: inline-block;
+}
+
 /* Media queries to ensure responsive design */
 /* Make logo full-width on smaller screens when navbar is collapsed */
 @media (max-width: 768px) {

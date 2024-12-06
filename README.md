@@ -295,7 +295,7 @@ superusers through Django's admin page.
 
 - Please see [TESTING.md](TESTING.md) for full manual and automated testing.
 
-Notes for testing:
+Notes for testing: this section is to be moved to TESTING>MD at the end of the project.
 
 Bugs found during development:
 1. delete and edit functions direct back to the top of the page:
@@ -331,13 +331,18 @@ if request.method == 'POST':
 
 4. main section pushed out of alignment.
 
-issue found: bootstrap settings, navbar-toggler class psudo element (box-sixing)
-button.navbar-toggler *, button.navbar-toggler ::after, button.navbar-toggler ::before {
-    box-sizing: border-box;
-}
+issue found: style.css , section styling's width settings coused the issue.
+
+solution: removed styling to re-align elements.
 
 5. Django messages out of alignment. : 
 Solution: text-center class added to div with id="msg"
+
+6. Add Image section squashed above 425px.
+
+7. Register section: username, email and input fields should be in different rows under 425px.
+
+8. Login section: username, email and password fields should be displayed inn seperate rows under 425px.
 
 ## Media <a name="media"></a>
 
