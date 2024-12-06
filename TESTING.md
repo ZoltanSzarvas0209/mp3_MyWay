@@ -73,8 +73,13 @@
     </details>
 
 -   <details> <summary> PASSED VALIDATION </summary>
-    <img src="">
+    <img src="static/images/html_validation/html_validation_passed.png">
     </details>
+
+    1. trailing / from meta element removed.
+    2. Alt atribute added to logo image.
+    3. h1 element removed from article and added before it as section header.
+    4. article element replaced with div element.
 
 ## Lighthouse 
 

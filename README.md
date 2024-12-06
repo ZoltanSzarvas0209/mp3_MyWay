@@ -327,7 +327,7 @@ if request.method == 'POST':
     page_obj = paginator.get_page(page_number)
 
 
-3. add image section is not fitting in well with the design and pushes other elements out of place.
+3. add image section is not fitting in well with the design and pushes other elements out of place on laptop size(1024px).
 
 4. main section pushed out of alignment.
 
@@ -340,9 +340,31 @@ Solution: text-center class added to div with id="msg"
 
 6. Add Image section squashed above 425px.
 
+bootstrap classes initially applied were md-10 and md-2 respectively to section image gallery and add image.
+
+solution: classes modified to a md- 7 , md-5 ratio.
+
+
 7. Register section: username, email and input fields should be in different rows under 425px.
 
-8. Login section: username, email and password fields should be displayed inn seperate rows under 425px.
+solution: css styling added to resolve issue
+@media (max-width: 425px) {
+    .signup p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+8. Login section: username and password fields should be displayed inn seperate rows under 425px.
+
+solution: css styling applied to login.html's form
+
+    .login p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
 ## Media <a name="media"></a>
 

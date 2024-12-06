@@ -216,3 +216,24 @@ i {
         text-align: center;
     }
 }
+
+@media (max-width: 425px) {
+    .signup p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    #addimage p {
+        display: flex;
+        flex-direction: column;
+    }
+}
