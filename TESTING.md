@@ -81,5 +81,13 @@
     3. h1 element removed from article and added before it as section header.
     4. article element replaced with div element.
 
+* CSS VALIDATION: 
+    
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="static/images/css_validation/css_validation.png">
+    </details>
+
+    1. validation passed on first attempt.
+
 ## Lighthouse 
 
