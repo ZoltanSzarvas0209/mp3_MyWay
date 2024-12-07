@@ -199,7 +199,7 @@
 -  #689CA0  - MOONSTONE
 -  #FFFFFF  - WHITE
 -  #D7E46D  - MINDARO
-
+-  #305B5F  - color added to improve contrast of navigation links.
 
 
 * Font family: 

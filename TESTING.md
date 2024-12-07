@@ -91,3 +91,13 @@
 
 ## Lighthouse 
 
+-   <details> <summary> INITIAL LIGHTHOUSE RESULTS </summary>
+    <img src="static/images/initial_lighthouse_results.png">
+    </details>
+
+-   <details> <summary> IMPROVED LIGHTHOUSE RESULTS </summary>
+    <img src="static/images/improved_lighthouse_results.png">
+    </details>
+
+    1. refactored complete style.css file with the use of ChatGPT to completly eliminate unused and duplicate code.
+    2. used https://coolors.co/contrast-checker/305b5f-ffffff to find more suitable color for navigation links to improve contrast.
