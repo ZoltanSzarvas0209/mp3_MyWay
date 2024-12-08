@@ -1,3 +1,4 @@
+![Mockup](static/images/am_i_responsive.png)
 
 
 # MANUAL TESTING
@@ -57,6 +58,42 @@
 
 </details>
 
+### Form Validation testing
+
+<details>
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Contact Form | Enter invalid input: No Title | No submission allowed - "Please fill in this field response" | PASS |
+| Contact Form | Enter invalid input: No Content | No submission allowed - "Please fill in this field response" | PASS |
+| Contact Form | Enter valid input | Submission allowed - "confirmation feedback" | PASS |
+| AddImage Form | Enter invalid input: No Title | No submission allowed - "Please fill in this field response" | PASS |
+| AddImage Form | Enter invalid input: No file | No submission allowed - "Please select a file" | PASS |
+| AddImage Form | Enter invalid input: No Content | No submission allowed - "Please fill in this field response" | FAIL |
+| AddImage Form(2) | Enter invalid input: No Content | No submission allowed - "Please fill in this field response" | PASS |
+| AddImage Form | Enter valid input | Submission allowed - "confirmation feedback message" | PASS |
+
+
+- One test failed: AddImage with no content was successfully submitted:
+    - Solution: description = models.TextField(blank=True, null=True) 
+    The above line in the Image model allowes the filled to be left empty. This was removed and re-test had passed.
+
+</details>
+
+### Browser Testing
+
+<details>
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| Google Chrome | non scripted test of features on desktop | full functionality and compatibility with browser | PASS |
+| Google Chrome | non scripted test of features on mobile | full functionality and compatibility with browser | PASS |
+| Microsoft Edge | non scripted test of features on desktop | full functionality and compatibility with browser | PASS |
+| Microsoft Edge | non scripted test of features on mobile | full functionality and compatibility with browser | PASS |
+| Samsung Internet | non scripted test of features on mobile | full functionality and compatibility with browser | PASS |
+
+</details>
+
 ### TESTING USER STORIES
 
 
@@ -66,7 +103,9 @@
 
 ### HTML,CSS and JS validation
 
-* HTML VALIDATION: 
+* HTML VALIDATION:    
+
+W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
     
 -   <details> <summary> Initial validation </summary>
     <img src="static/images/html_validation/html_validation_initial.png">
@@ -89,6 +128,14 @@
 
     1. validation passed on first attempt.
 
+* JavaScript VALIDATION: 
+    
+-   <details> <summary> PASSED VALIDATION </summary>
+    <img src="static/images/jshint_validation.png">
+    </details>
+
+    1. validation passed on first attempt.
+
 ## Lighthouse 
 
 -   <details> <summary> INITIAL LIGHTHOUSE RESULTS </summary>
@@ -99,5 +146,13 @@
     <img src="static/images/improved_lighthouse_results.png">
     </details>
 
+-   <details> <summary> FINAL LIGHTHOUSE TESTS </summary>
+    <img src="static/images/lighthouse_bestpractises.png">
+    </details>
+
     1. refactored complete style.css file with the use of ChatGPT to completly eliminate unused and duplicate code.
     2. used https://coolors.co/contrast-checker/305b5f-ffffff to find more suitable color for navigation links to improve contrast.
+    3. Best PRactises results came in low due to Cloudinary cookies and http , unsecure requests being used.
+        - Following code was used in settings.py to force cloudinary to use https:
+        import cloudinary
+        cloudinary.config(secure=True)

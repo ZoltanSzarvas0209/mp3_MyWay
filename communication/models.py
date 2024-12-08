@@ -8,7 +8,7 @@ class Image(models.Model):
     """ Image model to database, this is to store all images available for users to pick from,
     images will be stored in Cloudinary"""
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True, null=True)
+    description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     image_url = CloudinaryField('image', default='')
 

@@ -1,5 +1,14 @@
+![Mockup](static/images/am_i_responsive.png)
+
+
 # Introduction
 
+
+At MyWay, we believe every child deserves a voice. This belief stems from my personal journey as an uncle to two autistic nephews, one of whom is completely non-verbal. Watching him find joy in playing and watching videos on his tablet inspired this idea—it’s always within reach, making it the perfect tool to help him communicate.
+
+Currently, his communication relies on a physical book filled with specialized cards, but these wear out quickly and constantly need replacing. I wanted to create a more durable and modern alternative, so I designed MyWay—a web app that uses easy-to-understand communication cards to empower non-verbal children to express their needs, feelings, and thoughts.
+
+With MyWay, we aim to make everyday interactions smoother and more meaningful for children and their loved ones, creating a world where every child’s voice is heard—in their own way.
 
 ## Live site link here
 
@@ -10,27 +19,26 @@
 ## Table of contents
 
  1. [ UX ](#ux)
- 2. [ Technologies and Tools ](#technologies)    
- 3. [ Research ](#research) 
- 4. [ Target Audience ](#audience)  
- 5. [ User Stories ](#user)
- 6. [ Planning, Structure and Design ](#design)
+ 2. [ Technologies ](#tech)    
+ 3. [ Target Audience ](#audience)  
+ 4. [ User Stories ](#user)
+ 5. [ Planning, Structure and Design ](#design)
      - [ Iterations ](#iterations)
      - [ Layout ](#layout)
      - [ Features ](#features)
      - [ Design Choices ](#designchoice)
      - [ Wireframes ](#wireframes)
      - [ Database ](#database)
-        - [ Entity Relationship Diagram ](#erd) 
- 7. [ Deployment ](#deployment)
- 8. [ Testing/Bugs/Fixes ](#testing)
- 9. [ Media ](#media)
- 10. [ Credits ](#credit)  
+     - [ Entity Relationship Diagram ](#erd) 
+ 6. [ Deployment ](#deployment)
+ 7. [ Testing/Bugs/Fixes ](#testing)
+ 8. [ Media ](#media)
+ 9. [ Credits ](#credit)  
 
 ## UX <a name="ux"></a>
 
 
-### Technologies and Tools Used <a name="technologies"></a>
+## Technologies <a name="tech"></a>
 
 <details><summary> Technologies </summary>
 
@@ -79,9 +87,7 @@
 
 </details>
 
-### Research <a name="research"></a>
-
-### Target Audience <a name="audience"></a>
+## Target Audience <a name="audience"></a>
 
 * This app is made for children who cannot speak, including those with autism, speech delays, or other challenges. It helps them express their needs, feelings,
  and thoughts using simple communication or picture cards. The app also supports parents, caregivers, and teachers by making it easier to communicate and connect with these children.
@@ -285,7 +291,7 @@ superusers through Django's admin page.
 
 ### Database: <a name="database"></a>
 
-#### Entity Relationship Diagram: <a name="erd"></a>
+### Entity Relationship Diagram: <a name="erd"></a>
 
 
 ## Deployment <a name="deployment"></a>
