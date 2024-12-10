@@ -32,7 +32,7 @@ With MyWay, we aim to make everyday interactions smoother and more meaningful fo
      - [ Entity Relationship Diagram ](#erd) 
  6. [ Deployment ](#deployment)
  7. [ Testing/Bugs/Fixes ](#testing)
- 8. [ Media ](#media)
+ 8. [ Future Upgrades ](#upgrade)
  9. [ Credits ](#credit)  
 
 ## UX <a name="ux"></a>
@@ -397,7 +397,7 @@ solution: css styling applied to login.html's form
         align-items: center;
     }
 
-## Media <a name="media"></a>
+## Future Upgrades <a name="upgrade"></a>
 
 
 ## Credits <a name="credit"></a>

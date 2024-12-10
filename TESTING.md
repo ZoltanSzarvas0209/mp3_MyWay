@@ -96,6 +96,24 @@
 
 ### TESTING USER STORIES
 
+<details>
+
+| **Feature** | **Test Method** | **Expectation** | **Outcome** |
+|-------------|-----------------|-----------------|-------------|
+| User Story 1 | visual checking | introduction section is available and clearly explains the purpose of the site. | PASS |
+| User Story 2 | Upload a test image, edit said image and then delete it | all CRUD functionality working and easy to use | PASS |
+| User Story 3 | visual inspection | image gallery available in a paginated format | PASS |
+| User Story 4 | visual inspection for the communication board section and click images to test functionality | clciked images to appear on communication board | PASS |
+| User Story 5 | click reset button to clear board. | communication board to reset to default placeholder images. | PASS |
+| User Story 6 | Navigate to relevant pages, register a dummy account | able to register an account and login as | PASS |
+| User Story 7 | visual inspection | contact page is available through navigation and is presenting a contact form | PASS |
+| User Story 8 | fill in contact form with dummy information | feedback that message was sent to be presented to user | PASS |
+| User Story 9 | Superuser feature, login to Djangos admin site | all message submitted available for review. | PASS |
+
+- User story 6 , Criteria 3 is not fullfilled and is part of future improvement recommendations as it was out of the scope of this project.
+
+</details>
+
 
 
 
