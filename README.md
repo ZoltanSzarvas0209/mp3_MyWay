@@ -308,6 +308,19 @@ superusers through Django's admin page.
 
 ## Deployment <a name="deployment"></a>
 
+- I used Heroku to deploy this project.
+
+
+- To deploy to Heroku:
+
+1. in Gitpod CLI create your Procfile and make sure it contains the following line of code:   web: gunicorn myway.wsgi
+   This tells Heroku how to run the application.
+2. Login to Heroku, select 'Create New App', create a unique name for the app and select your nearest region. Click 'Create App'
+3. Navigate to the Deploy tab on Heroku dashboard and select Github, search for your project's reposatory and click 'connect'.
+4. Navigate to 'settings', click reveal config vars and input the Database and SECRET KEY KEY-VALUE pairs along with all other dependencies relevent to the project.
+5. Go to the Deploy tab , scroll to Manual Deploy and clcik on 'Deploy branch'
+6. Once build is complete click on 'View' to launch the new app
+
 
 ## Testing/Bugs/Fixes <a name="testing"></a>
 
