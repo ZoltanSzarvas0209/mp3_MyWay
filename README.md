@@ -291,7 +291,19 @@ superusers through Django's admin page.
 
 ### Database: <a name="database"></a>
 
+- A relational database, PostgreSQL was chosen for the project because it provides a structured way to store and manage data in tables with clearly defined relationships. This structure ensures data consistency and makes querying straightforward, which is essential for features like managing public image uploads, storing contact messages, and potentially scaling to user-specific functionalities.
+
 ### Entity Relationship Diagram: <a name="erd"></a>
+
+- The User model, integrated using Django's AllAuth, demonstrates user registration and authentication capabilities. At this stage, no custom user data is added, serving purely as a showcase of the system's extensibility for user management.
+
+- The Image model is independent and serves as a public-facing feature. Anyone, whether a registered user or not, can upload images. Each uploaded image is stored with metadata, including title, description, and image_url. This functionality is intended to demonstrate public interaction with the application and image management capabilities.
+
+- The Contact model is also independent and public-facing. It allows anyone to send messages to the company, with fields for title, content, and an updated_on timestamp. Superusers can access and manage these messages, providing a means of direct communication with the company.
+
+- <details><summary> ERD </summary>
+    <img src="static/images/entityrelationshipdiagram.png">
+    </details>
 
 
 ## Deployment <a name="deployment"></a>

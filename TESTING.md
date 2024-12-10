@@ -136,6 +136,36 @@ W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
 
     1. validation passed on first attempt.
 
+## PEP8 , python validation:
+
+* Communication App:  No mayor errors, several whitespaces needed clearing, a few line of code were too long and some indentation needed adjusting.
+
+-   <details> <summary> PASSED VALIDATION forms.py </summary>
+    <img src="static/images/pep8validation/communication_forms.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION models.py </summary>
+    <img src="static/images/pep8validation/communication_model.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION views.py </summary>
+    <img src="static/images/pep8validation/communication_views.png">
+    </details>
+
+* Contact App: Cleared validation
+
+-   <details> <summary> PASSED VALIDATION forms.py </summary>
+    <img src="static/images/pep8validation/contact_form.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION models.py </summary>
+    <img src="static/images/pep8validation/contact_model.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION views.py </summary>
+    <img src="static/images/pep8validation/contact_views.png">
+    </details>
+
 ## Lighthouse 
 
 -   <details> <summary> INITIAL LIGHTHOUSE RESULTS </summary>
