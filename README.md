@@ -122,7 +122,7 @@ With MyWay, we aim to make everyday interactions smoother and more meaningful fo
     - As a user, I want to select up to 3 images from the gallery to showcase in a special section.
     
     1. Acceptance criteria : A section is available with empty image slots for communication.
-    2. Acceptance criteria : When the slots are clicked the images tore is available to choose desired image from. 
+    2. Acceptance criteria : When the slots are clicked the image store is available to choose desired image from. 
 
 * User story 5: 
 

@@ -5,6 +5,17 @@ from .forms import Contact_form
 
 
 def contact_view(request):
+    """
+    Render the contact page with the contact form.
+
+    **Context**
+
+    - `contactform`: An instance of the contactForm class.
+
+    **Template:**
+
+    template:`contact.html`
+    """
     if request.method == "POST":
         contactform = Contact_form(data=request.POST)
         if contactform.is_valid():
@@ -16,14 +27,12 @@ def contact_view(request):
                 we will respond as soon as possible!"
             )
 
-    contact = Contact.objects.all().order_by('-updated_on').first()
     contactform = Contact_form()
 
     return render(
         request,
         "contact/contact.html",
         {
-            "contact": contact,
             "contactform": contactform
         },
     )
