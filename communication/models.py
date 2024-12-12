@@ -14,7 +14,7 @@ class Image(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    image_url = CloudinaryField('image', default='')
+    image_url = CloudinaryField('image', default='placeholder_irkbnr')
 
     def __str__(self):
         return self.title

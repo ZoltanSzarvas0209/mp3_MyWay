@@ -170,6 +170,10 @@ W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
     <img src="static/images/pep8validation/communication_views.png">
     </details>
 
+-   <details> <summary> PASSED VALIDATION test_forms.py </summary>
+    <img src="static/images/pep8validation/communication_test.png">
+    </details>
+
 * Contact App: Cleared validation
 
 -   <details> <summary> PASSED VALIDATION forms.py </summary>
@@ -182,6 +186,10 @@ W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
 
 -   <details> <summary> PASSED VALIDATION views.py </summary>
     <img src="static/images/pep8validation/contact_views.png">
+    </details>
+
+-   <details> <summary> PASSED VALIDATION test_forms.py </summary>
+    <img src="static/images/pep8validation/contact_test.png">
     </details>
 
 ## Lighthouse 
@@ -204,3 +212,16 @@ W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
         - Following code was used in settings.py to force cloudinary to use https:
         import cloudinary
         cloudinary.config(secure=True)
+
+## Django Automated Tests
+
+- Django's Testing library was used to test Projects's forms. Corresponding PEP8 validation listed in PEP8 section above. Each form was tested with 3 tests.
+
+-   <details> <summary> Communication App's form </summary>
+    <img src="static/images/django_test1.png">
+    </details>
+
+-   <details> <summary> Communication App's form </summary>
+    <img src="static/images/django_test2.png">
+    </details>
+
