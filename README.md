@@ -399,9 +399,32 @@ solution: css styling applied to login.html's form
 
 ## Future Upgrades <a name="upgrade"></a>
 
+* Several features and ideas were identified and recommended for future increments that were out of the scope of the project.
+
+1. Pop-up window , when images are selected for the Communication Board to confirm selection. This feature was trialed with simple HTML element with JavaScript functionality, however desired result was not achived during initial development.
+
+2. Customised Profiles: While Django's Allauth authentication is implemented, at this stage it has no customised data linked to it. 
+The Project has the potential to feature personalised profiles for users and capabilities to upload and manage customised image galleries.
+This feature should also include a correspondence window, where messages submited through the app can be revisited.
+
+3. It has come to my attention during development that while the app has the desied functionality, it is best applied in medium to large screen sizes and further responsivness could be applied to mobile devices to ease navigation and decreses current level of scrolling required. Proposed improvment would feture a functionality, where the Communication board's placeholder images can be clicked directly to present available images to choose from( rather then navigating between the image gallery and communication board section).
+
+4. The application should be further improved with personalised routine boards to feuture daily/weekly/monthly schedules.
+
+5. The Communication board should be enhanced with cathegory options such as feelings or activities.
+
 
 ## Credits <a name="credit"></a>
 
+* Following resources were used during the project:
 
-## Acknowledgement
+- https://www.w3schools.com/  - was used to help with HTML and JavaScript ideas.
+
+- CodeInstitute's Tutor Assistence - Assistence were used in a few occasion:
+1. Cloudinary images are not rendered as intended.
+2. Main section block is out of alignment.
+3. Pop-up window - This feature was transfered for future improvement recommendation as no viabale solution was found within the available timeframe and project meets requirements without the feature.
+
+- ChatGPT: This AI was used consistently, to help troubleshoot errors , refactor code , suggest improvements. - All dependencies are credited in comments.
+
             
