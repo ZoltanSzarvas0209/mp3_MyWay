@@ -1,7 +1,12 @@
 ![Mockup](static/images/am_i_responsive.png)
 
+# TABLE OF CONTENT
 
-# MANUAL TESTING
+1. [ Manual Testing ](#manual)
+2. [ Automated Testing ](#auto)
+3. [ Bugs and Fixes ](#bugs)
+
+# MANUAL TESTING <a name="manual"></a>
 
 ### Testing Responsiveness
 
@@ -117,7 +122,7 @@
 
 
 
-# AUTOMATED TESTING
+# AUTOMATED TESTING <a name="auto"></a>
 
 ### HTML,CSS and JS validation
 
@@ -224,4 +229,151 @@ W3C validators used for HTML and CSS and JsHint is used to validate JAvaScript.
 -   <details> <summary> Communication App's form </summary>
     <img src="static/images/django_test2.png">
     </details>
+
+
+# Bugs and Fixes <a name="bugs"></a>
+
+Bugs found during development:
+
+1. delete and edit functions direct back to the top of the page:
+
+- solution: JavaScript added to implement required functionality.
+
+
+2. edit function when triggered overwrites pagination and image gallery gets out of context.
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_2.png">
+    </details>
+
+- solution: following code was addedmodified to rectify the issue. in communication/views.py 
+if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES, instance=image)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Image updated successfully!")
+
+            # Set session flag to scroll to image gallery
+            request.session['scrollToImageGallery'] = True
+
+            # Redirect to the gallery section with page number
+            url = reverse('communication_home') + f'?page={page_number}#image-gallery'
+            return redirect(url)
+        else:
+            messages.error(request, "Failed to update image. Please try again.")
+    else:
+        form = ImageForm(instance=image)
+
+    paginator = Paginator(queryset, 4)
+    page_obj = paginator.get_page(page_number)
+
+
+3. add image section is not fitting in well with the design and pushes other elements out of place on laptop size(1024px).
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_3.png">
+    </details>
+
+4. main section pushed out of alignment.
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_4.png">
+    </details>
+
+issue found: style.css , section styling's width settings coused the issue.
+
+solution: removed styling to re-align elements.
+
+5. Django messages out of alignment. : 
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelpment_issue_5.png">
+    </details>
+
+Solution: text-center class added to div with id="msg"
+
+6. Add Image section squashed above 425px.
+
+bootstrap classes initially applied were md-10 and md-2 respectively to section image gallery and add image.
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_6.png">
+    </details>
+
+solution: classes modified to a md- 7 , md-5 ratio.
+
+
+7. Register section: username, email and input fields should be in different rows under 425px.
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_7.png">
+    </details>
+
+solution: css styling added to resolve issue
+@media (max-width: 425px) {
+    .signup p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+8. Login section: username and password fields should be displayed in seperate rows under 425px.
+
+-   <details> <summary> Image of issue </summary>
+    <img src="static/images/bugs/duringdevelopment_issue_8.png">
+    </details>
+
+solution: css styling applied to login.html's form
+
+    .login p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+9. Register and Login pages cruashed after Deployment:
+
+following error message was presented with DEBUG set to True in settings.py:
+
+Exception Type:	DoesNotExist
+Exception Value:	
+Site matching query does not exist.
+Exception Location:	/workspace/.pip-modules/lib/python3.12/site-packages/django/db/models/query.py, line 637, in get
+Raised during:	allauth.account.views.LoginView
+Python Executable:	/home/gitpod/.pyenv/versions/3.12.2/bin/python3
+
+The error suggest there is no site object in the database that maches the domain.
+
+Troubleshooting:
+1. double checked all installed apps present as required in settings.py:
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+
+2. MAde sure SITE_ID is set to 1.
+
+3. Used ChatGPT to guide me through checking for the site object using the Django shell:
+
+- from django.contrib.sites.models import Site
+    try:
+    site = Site.objects.get(id=1)
+    print(f"Site found: {site.domain}, {site.name}")
+    except Site.DoesNotExist:
+    print("No Site object with id=1 exists.")
+
+No site object was found.
+
+- from django.contrib.sites.models import Site
+    Site.objects.create(
+    id=1,
+    domain='8000-zoltanszarvas0-mp3myway-n5zd8ad8dor.ws.codeinstitute-ide.net',
+    name='MyWay'
+    )
+    print("Site object created.")
+
+Created new Site object , Following this the issue was resolved in production enviroment.
+
+- On re-check now the site object was found, so made migratitions to update database. Here I also run makemigrations as found that earlier changes in model.py was not migrated.(default cloudinary image).
 
