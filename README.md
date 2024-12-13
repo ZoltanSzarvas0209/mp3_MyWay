@@ -10,10 +10,10 @@ Currently, his communication relies on a physical book filled with specialized c
 
 With MyWay, we aim to make everyday interactions smoother and more meaningful for children and their loved ones, creating a world where every child’s voice is heard—in their own way.
 
-## Live site link here
+## **[MyWay Live Site](https://myway-01051f188b2e.herokuapp.com/)**
 
 
-## Repository link here
+## **[MyWay REPOSITORY](https://github.com/ZoltanSzarvas0209/mp3_MyWay.git)**
 
 
 ## Table of contents
