@@ -302,7 +302,7 @@ superusers through Django's admin page.
 - The Contact model is also independent and public-facing. It allows anyone to send messages to the company, with fields for title, content, and an updated_on timestamp. Superusers can access and manage these messages, providing a means of direct communication with the company.
 
 - <details><summary> ERD </summary>
-    <img src="static/images/entityrelationshipdiagram.png">
+    <img src="static/images/erd_lucid.png">
     </details>
 
 
