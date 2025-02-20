@@ -33,7 +33,12 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-zoltanszarvas0-mp3myway-n5zd8ad8dor.ws.codeinstitute-ide.net','.herokuapp.com']
+ALLOWED_HOSTS = [
+    '127.0.0.1',  # Add localhost
+    'localhost',  # Add localhost as well
+    '8000-zoltanszarvas0-mp3myway-n5zd8ad8dor.ws.codeinstitute-ide.net',
+    '.herokuapp.com',
+]
 
 
 # Application definition
@@ -95,6 +100,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myway.wsgi.application'
+
 
 
 # Database
